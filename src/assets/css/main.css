@@ -1,0 +1,126 @@
+body,
+html {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Quicksand", sans-serif !important;
+  position: relative !important;
+  margin: auto !important;
+  height: 100%;
+}
+
+.navbar-brand {
+  width: 100%;
+  vertical-align: top;
+}
+.navbar-brand img{
+  width: 6rem;
+}
+.navbar .navbar-nav .nav-link {
+  color: white !important;
+  font-size: 1.8em !important;
+  background-color: transparent;
+  margin-left: 0.6em;
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: #808080 !important;
+}
+
+.navbar span {
+  color: white;
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.sm-icons {
+  flex-direction: row;
+}
+@media only screen and (max-width: 960px) {
+  .sm-icons .nav-item {
+    padding-right: 3em;
+  }
+}
+
+.container {
+  margin: 0 !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  color: white;
+}
+
+.container .title {
+  font-size: 3.4em;
+  font-weight: 700;
+}
+
+.container .description {
+  font-size: 1.4em !important;
+  text-align: justify;
+  text-align-last: left;
+}
+
+.button {
+  text-align: center;
+}
+
+.btn,
+.btn::after,
+.btn:focus {
+  display: inline-block;
+  font: normal normal 300 1.5em "Quicksand" !important;
+  text-decoration: none !important;
+  color: white !important;
+  brackground-color: transparent !important;
+  border: 1px solid white !important;
+  border-radius: 100px !important;
+  padding: 0.5em 3em !important;
+  margin: 5px !important;
+  background-size: 200% 100% !important;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    rgb(47, 117, 207) 50%
+  ) !important;
+  transition: background-position 0.3s cubic-bezier(0.19, 1, 0.22, 1) 0.1s,
+    color 0.5s ease 0s, background-color 0.5s ease !important;
+}
+
+.btn:hover {
+  border: 1px solid rgb(47, 117, 207);
+  color: rgba(255, 255, 255, 1);
+  background-color: rgb(47, 117, 207);
+  background-position: -100% 100%;
+}
+
+
+
+
+.col {
+  padding: 1rem 2rem 2rem 1rem;
+}
+
+.container .video {
+  margin: 0;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  color: white;
+  font-weight: 600;
+  font-size: 1.3em;
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}

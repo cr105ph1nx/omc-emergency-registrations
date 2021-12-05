@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
@@ -57,43 +57,7 @@
     </nav>
 
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="title"><p>🐧✨ Join the Family !</p></div>
-          <div class="description">
-            <p>
-              Tout a émergé en 2009 de la volonté d’un groupe d'étudiants de
-              l’USTHB qui a organiser la première install party dans le pays.
-              Ils se sont posé pour défi d’apporter l’open source au grand
-              public. Ce challenge primordial est constituant de l’essence du
-              club. Ces étudiants ont ensuite fondé Open Minds Club, afin de
-              mieux pouvoir relever le défi en permanence en se fixant de
-              nouveaux objectifs, en organisant plus d'activités et de
-              rencontres sous des formes diverses, mais dont le but est toujours
-              le même. Le but et la raison d'être du club est la promotion de ce
-              qui est vraiment pour nous “l'esprit" ou la “philosophie” du libre
-              et de l’open source d'où notre slogan, "Ce qui ne se partage pas
-              se perd".
-            </p>
-          </div>
-        <div style="position:relative">
-          <modale :show="show" :toggleModale="toggleModale"></modale>
-          <div v-on:click="toggleModale" class="btn">S'inscrire</div>
-        </div>
-          
-        </div>
-        <div class="col">
-          <div class="video">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/ysnt-nAPTNo"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
-        </div>
-      </div>
+      <router-view/>
     </div>
 
     <footer>
@@ -103,29 +67,18 @@
 </template>
 
 <script>
-import Modale from "./components/Modale.vue";
 export default {
   name: "App",
-  components: {
-    modale: Modale,
-  },
   data() {
     return {
       show: false,
     };
   },
   methods: {
-    parentMethod(success) {
-      // Do something with the value
-      this.success = success;
-    },
-    toggleModale: function () {
-      this.show = !this.show;
-    },
   },
 };
 </script>
 
-<style scoped>
+<style>
 @import "assets/css/main.css";
 </style>
